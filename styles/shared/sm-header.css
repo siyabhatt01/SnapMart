@@ -1,0 +1,129 @@
+.sm-header{
+    display: flex;
+    flex-direction: row;
+    background-color: #8330c2;
+    color: white;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top:0px;
+    z-index: 100;
+}
+/* 
+
+.sm-logo{
+    height:40px;
+    border: 3px solid #cd9ff0;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-left: 1vw;
+}
+.sm-mobile-logo{
+    height: 40px;
+    border: 3px solid #cd9ff0;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-left: 1vw;
+} */
+
+@media (max-width:575px) {
+    .sm-logo{
+        display: none;
+    }
+    .sm-mobile-logo{
+        height:40px;
+        border: 3px solid #cd9ff0;
+        border-radius: 8px;
+        margin-top: 10px;
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+    
+}
+@media (min-width:576px) {
+    .sm-mobile-logo{
+        display: none;
+    }
+    .sm-logo{
+        height:40px;
+        border: 3px solid #cd9ff0;
+        border-radius: 8px;
+        margin-top: 10px;
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+}
+
+.sm-header-middle-section
+{
+  flex: 5;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar{
+    height:35px;
+    width:80%;
+    font-size: large;
+    padding-left: 10px;
+    border:2px solid #cd9ff0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: none;
+    position:relative;
+    top:12px;
+}
+.search-button{
+    height:41px;
+    margin-top: 12px;
+    border: 2px solid #cd9ff0 ;
+    margin-left:-5px ;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #cd9ff0;
+}
+.search-icon{
+    height: 80%;
+}
+
+.sm-header-right-section{
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+.orders-link{
+   margin-top: 8px;
+   margin-left: 10px;
+   text-decoration: none;
+}
+
+.returns-text{
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.orders-text{
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+.cart-link{
+    display: flex;
+}
+.cart-icon{
+    height: 40px;
+    margin-top: 12px;
+}
+.cart-quantity{
+    color: rgba(255, 200, 0, 0.699);
+    font-weight: 700;
+    position: relative;
+    top:10px;
+    right:30px;
+    text-decoration: none;
+}

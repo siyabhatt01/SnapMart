@@ -1,0 +1,158 @@
+.main {
+    margin-top: 90px;
+  }
+
+.products-grid{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    
+}
+@media (max-width: 2000px) {
+    .products-grid {
+      grid-template-columns: repeat(7, 1fr);
+    }
+  }
+  
+  /* This @media means when the screen width is 1600px or
+     less, we will divide the grid into 6 columns. */
+  @media (max-width: 1600px) {
+    .products-grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  
+  @media (max-width: 1300px) {
+    .products-grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .products-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .products-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .products-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+.product-container{
+  padding: 20px;
+
+  /* border-right: 1px solid rgb(231, 231, 231);
+  border-bottom: 1px solid rgb(231, 231, 231); */
+  border-top: 2px solid #8330c2;
+  border-bottom: 2px solid #8330c2;
+  border-right: 2px solid #8330c2;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+.product-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    height: 180px;
+    margin-bottom: 20px;
+  }
+
+  .product-image {
+    /* Images will overflow their container by default. To
+      prevent this, we set max-width and max-height to 100%
+      so they stay inside their container. */
+    max-width: 100%;
+    max-height: 100%;
+    /* border: 2px solid #8330c2; */
+    border-radius: 10px;
+  }
+  .product-name {
+    height: 40px;
+    margin-bottom: 5px;
+    font-weight:550;
+  }
+  
+  .product-rating-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .product-rating-stars {
+    width: 100px;
+    margin-right: 6px;
+  }
+  
+  .product-rating-count {
+    color: rgb(1, 124, 182);
+    cursor: pointer;
+    margin-top: 3px;
+  }
+  .product-price {
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .product-quantity-container {
+    margin-bottom: 17px;
+  }
+  .product-quantity-container select{
+    padding: 5px 8px;
+    background-color: #ede1f7;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .product-spacer {
+    flex: 1;
+  }
+  
+  .added-to-cart {
+    color: rgb(6, 125, 98);
+    font-size: 16px;
+  
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  
+    /* At first, the "Added to cart" message will
+       be invisible. Use JavaScript to change the
+       opacity and make it visible. */
+    opacity: 0;
+  }
+  
+  .added-to-cart img {
+    height: 20px;
+    margin-right: 5px;
+  }
+  
+  .add-to-cart-button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 50px;
+    border: none;
+    background-color: #8330c2;
+    color: white;
+  }
+  .add-to-cart-button:hover {
+   cursor: pointer;
+  
+}
+  
+  
+  
