@@ -40,7 +40,7 @@ products.forEach((products)=>{
   
             <div class="product-spacer"></div>
   
-            <div class="added-to-cart">
+            <div class="added-to-cart ">
               <img src="images/icons/checkmark.png">
               Added
             </div>
@@ -72,8 +72,7 @@ products.forEach((products)=>{
                 matchingItem.quantity+=1;
             }
             else{
-                cart.push(
-                {
+                cart.push({
                     productId:productId,
                     quantity:1
                 });
@@ -86,6 +85,31 @@ products.forEach((products)=>{
             });
             document.querySelector('.js-cart-quantity').innerHTML=cartQuantity;
            
+            document.querySelectorAll('.added-to-cart').forEach((div)=>{
+
+            });
+
+
+             
         });
  });
  
+
+
+ document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
+  button.addEventListener(
+      'click',()=>{
+          // Add class to the corresponding .added-to-cart div
+            const productContainer = button.closest('.product-container');
+            const addedToCartDiv = productContainer.querySelector('.added-to-cart');
+            addedToCartDiv.classList.add('js-added-to-cart');
+          
+           
+          // Use setTimeout to remove the class after 4 seconds (4000 ms)
+          setTimeout(() => {
+            addedToCartDiv.classList.remove('js-added-to-cart');
+          }, 3000); // Delay is in milliseconds
+        
+      });
+});
+
