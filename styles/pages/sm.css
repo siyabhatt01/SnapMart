@@ -87,7 +87,14 @@
     margin-bottom: 5px;
     font-weight:550;
   }
-  
+  .limit-text-to-2-lines {
+    display: -webkit-box;        /* Use a flexible box layout */
+    -webkit-box-orient: vertical; /* Set the box orientation to vertical */
+    -webkit-line-clamp: 2;       /* Limit the text to 2 lines */
+    overflow: hidden;            /* Hide any overflowing text */
+    text-overflow: ellipsis;     /* Add an ellipsis (...) at the end of the truncated text */
+  }
+
   .product-rating-container {
     display: flex;
     align-items: center;
