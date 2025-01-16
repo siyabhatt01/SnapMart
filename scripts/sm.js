@@ -105,8 +105,6 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
 
     // Get the selected option's value and parse it as an integer
     const selectedValue = parseInt(selectElement.value);
-    console.log('Parsed selected value:', selectedValue);
-
     const productId = button.dataset.productId;
 
     let matchingItem;

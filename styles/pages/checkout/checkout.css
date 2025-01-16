@@ -1,3 +1,14 @@
+body{
+  font-family: Roboto,Arial;
+}
+.update-quantity-link, .delete-quantity-link{
+  color: rgb(89, 89, 242);
+}
+.update-quantity-link:hover, .delete-quantity-link:hover{
+  color:rgb(255, 98, 0);
+  cursor: pointer;
+}
+
 .main {
     max-width: 1100px;
     padding-left: 30px;
@@ -40,6 +51,11 @@
     .checkout-grid {
       grid-template-columns: 1fr;
     }
+  }
+
+
+  .checkout-header-middle-section a{
+      color: rgb(255, 174, 0);
   }
   
   .cart-item-container,
@@ -212,3 +228,7 @@
     border: none;
   }
   
+  .place-order-button:hover {
+    cursor: pointer;
+    background-color: rgb(207, 167, 245);
+  }
