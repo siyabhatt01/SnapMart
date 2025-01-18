@@ -26,7 +26,7 @@ products.forEach((products)=>{
             </div>
   
             <div class="product-quantity-container">
-              <select class="js-quantity-select">
+              <select class="js-quantity-select js-quantity-selector-${products.id}">
                 <option selected="" value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -55,16 +55,14 @@ products.forEach((products)=>{
 });
 
 function updateCartQuantity(){
-  
-    let cartQuantity=0;
 
+    let cartQuantity=0;
     cart.forEach((item)=>{
       cartQuantity+=item.quantity;
+      document.querySelector('.js-cart-quantity').innerHTML=cartQuantity;
     });
-    document.querySelector('.js-cart-quantity').innerHTML=cartQuantity;
-
-}
-
+  }
+updateCartQuantity();
  document.querySelector('.js-product-grid').innerHTML=generatedProductsHTML;
 
  document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
@@ -91,7 +89,7 @@ function updateCartQuantity(){
           // Use setTimeout to remove the class after 4 seconds (4000 ms)
           setTimeout(() => {
             addedToCartDiv.classList.remove('js-added-to-cart');
-          }, 3000); // Delay is in milliseconds
+          }, 2000); // Delay is in milliseconds
         
       });
 });
