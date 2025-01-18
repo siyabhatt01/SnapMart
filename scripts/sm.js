@@ -73,7 +73,7 @@ function updateCartQuantity(){
             const productId=button.dataset.productId;
             
             addToCart(productId);
-             
+            updateCartQuantity(); 
         });
  });
  
@@ -98,40 +98,40 @@ function updateCartQuantity(){
 
 
 
-document.querySelectorAll('.js-add-to-cart').forEach((button) => {
-  button.addEventListener('click', () => {
-    const productContainer = button.closest('.product-container');
-    const selectElement = productContainer.querySelector('.js-quantity-select');
+// document.querySelectorAll('.js-add-to-cart').forEach((button) => {
+//   button.addEventListener('click', () => {
+//     const productContainer = button.closest('.product-container');
+//     const selectElement = productContainer.querySelector('.js-quantity-select');
 
-    // Get the selected option's value and parse it as an integer
-    const selectedValue = parseInt(selectElement.value);
-    const productId = button.dataset.productId;
+//     // Get the selected option's value and parse it as an integer
+//     const selectedValue = parseInt(selectElement.value);
+//     const productId = button.dataset.productId;
 
-    let matchingItem;
-    cart.forEach((item) => {
-      if (productId == item.productId) {
-        matchingItem = item;
-      }
-    });
+//     let matchingItem;
+//     cart.forEach((item) => {
+//       if (productId == item.productId) {
+//         matchingItem = item;
+//       }
+//     });
 
-    if (matchingItem) {
-      matchingItem.quantity += (selectedValue-1);
-    } else {
-      cart.push({
-        productId: productId,
-        quantity: selectedValue-1
-      });
-    }
+//     if (matchingItem) {
+//       matchingItem.quantity += (selectedValue-1);
+//     } else {
+//       cart.push({
+//         productId: productId,
+//         quantity: selectedValue-1
+//       });
+//     }
 
-    let cartQuantity = 0;
+//     let cartQuantity = 0;
 
-    cart.forEach((item) => {
-      cartQuantity += item.quantity;
-    });
+//     cart.forEach((item) => {
+//       cartQuantity += item.quantity;
+//     });
 
-    document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
-  });
-});
+//     document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+//   });
+// });
 
 
 // document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
